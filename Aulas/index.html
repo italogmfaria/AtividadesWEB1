@@ -15,9 +15,13 @@ body {
         }
         #menu {
             background-color: #333;
-            padding: 10px;
             text-align: center;
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
         }
+
         #menu a {
             color: white;
             text-decoration: none;
@@ -31,17 +35,44 @@ body {
         #content {
             margin: 20px;
         }
+        img a:hover {
+            background-color: #ff9900;
+            opacity: 0.7; 
+        }
         img {
             display: inline-block;
             justify-content: center;
             align-items: center;
-            border: 10px solid black;
+            border: 5px solid black;
             max-width: 100%;
-            width: 210px; /* Defina o tamanho desejado para as imagens */
+            width: 210px; 
             height: auto;
             object-fit: cover; 
             padding: 5px;
             margin: 10px 20px 10px 0;
+            transition: background-color 0.1s, opacity 0.1s; /* Add transition for smooth effect */
+        }
+        
+        img:hover {
+            background-color: #ff9900;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) { /* Destinado a deixar o site responsivo*/
+            body {
+                font-size: 12px; 
+            }
+
+            #menu {
+                flex-direction: column; 
+                align-items: center; 
+            }
+            img {
+                max-width: 70%;
+                width: auto;
+                height: auto;
+                margin: 10px auto;
+            }
         }
     </style>
 </head>
