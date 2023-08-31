@@ -1,40 +1,256 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
+
 <head>
-    <title>Página com comentários</title>
-    <meta charset="UTF-8"> 
-    <link rel="shortcut icon" href="img/favicon.png"> 
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://angular.io/assets/images/logos/angular/shield-large.svg">
     <title>Manual do Angular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        li {
+            color: #555;
+            line-height: 250%;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: black;
+        }
+
+        img {
+            border: 3px solid #007bff;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="../../index.html">Link da Página Principal</a><br><br>
-    <h1>Manual do Angular</h1>
+    <header>
+        <h1>Manual do Angular</h1>
+    </header>
 
-    <h2>Introdução ao Angular</h2>
-    <p>O Angular é uma estrutura de desenvolvimento de aplicativos front-end baseada em TypeScript.</p>
+    <nav>
+        <a href="../../index.html">Link da Página Principal</a>
+        <a href="#introducao">Introdução ao Angular</a>
+        <a href="#versoes">Versões</a>
+        <a href="#instalando">Instalando o Angular CLI</a>
+        <a href="#verificando">Verificando a instalação</a>
+        <br><br>
+        <a href="#criando">Criando um projeto em Angular</a>
+        <a href="#executando">Executando aplicações em Angular</a>
+        <a href="#conclusao">Conclusão</a>
+        <a href="#referencias">Referências</a>
+    </nav>
 
-    <h2>Versões</h2>
-    <p>A versão mais recente do Angular é a X.Y.Z. Verifique o <a href="https://angular.io/"><em>site oficial do Angular</em></a> para obter informações atualizadas sobre versões.</p>
+    <div class="container" align="justify">
+        <a name="introducao">
+            <h2>Introdução ao Angular</h2>
+        </a>
+        <p>O Angular é um framework de desenvolvimento front-end amplamente utilizado para a criação de aplicações web
+            dinâmicas e interativas. Desenvolvido e mantido pelo Google, o Angular fornece uma estrutura robusta para
+            construir interfaces de usuário modernas, facilitando a criação de aplicações complexas e escaláveis.</p>
 
-    <h2>Instalando o Angular CLI</h2>
-    <p>O Angular CLI (Command Line Interface) é uma ferramenta que simplifica a criação, desenvolvimento e compilação de projetos Angular.</p>
-    <pre><code>npm install -g @angular/cli</code></pre>
+        <a name="versoes">
+            <h2>Versões</h2>
+            <ol>
+                <li>
+                    <strong>2016 – Angular 2</strong>
+                    <p>O Angular 2, lançado em 2016, trouxe uma reformulação significativa em relação à primeira versão.
+                        Introduziu o conceito de componentes, facilitando a construção de interfaces de usuário
+                        modulares e
+                        reutilizáveis. Além disso, adotou uma abordagem baseada em TypeScript, trazendo tipagem estática
+                        e
+                        outras melhorias de linguagem para o desenvolvimento.</p>
+                </li>
+                <li>
+                    <strong>2017 – Angular 4</strong>
+                    <p>O Angular 4, lançado em 2017, trouxe melhorias significativas em termos de tamanho do pacote,
+                        desempenho e usabilidade. Além disso, introduziu recursos como ngIf com else, animações mais
+                        eficientes e um novo módulo HTTP client.</p>
+                </li>
+                <li>
+                    <strong>Novembro de 2017 – Angular 5</strong>
+                    <p>O Angular 5, lançado em novembro de 2017, concentrou-se em melhorias de desempenho, diminuição do
+                        tamanho do pacote gerado e introduziu novos recursos como a compilação incremental.</p>
+                </li>
+                <li>
+                    <strong>Abril de 2018 – Angular 6</strong>
+                    <p>O Angular 6, lançado em abril de 2018, trouxe recursos como o Angular Elements, que permite criar
+                        componentes Angular como Web Components, além de melhorias no CLI e no sistema de compilação.
+                    </p>
+                </li>
+                <li>
+                    <strong>Outubro de 2018 – Angular 7</strong>
+                    <p>O Angular 7, lançado em outubro de 2018, focou em melhorias de desempenho, atualizações de CLI,
+                        recursos de acessibilidade e introduziu o Angular Material CDK (Component Dev Kit).</p>
+                </li>
+                <li>
+                    <strong>Março/Abril de 2019 – Angular 8</strong>
+                    <p>O Angular 8, lançado entre março e abril de 2019, trouxe melhorias no carregamento do aplicativo,
+                        otimizações de renderização e recursos como ngUpgrade para facilitar a migração de aplicações
+                        legadas.</p>
+                </li>
+                <li>
+                    <strong>Outubro/Novembro de 2019 – Angular 9</strong>
+                    <p>O Angular 9, lançado entre outubro e novembro de 2019, trouxe melhorias de desempenho,
+                        atualizações
+                        de dependências e a introdução do Ivy Renderer como opção experimental, prometendo melhorar
+                        ainda
+                        mais o desempenho e o tamanho do pacote.</p>
+                </li>
 
-    <h2>Verificando a instalação</h2>
-    <p>Verifique se o Angular CLI foi instalado corretamente:</p>
-    <pre><code>ng --version</code></pre>
+                <li>
+                    <strong>Hoje em dia – Angular </strong>
+                    <p>A versão mais recente do Angular continua a evoluir com melhorias contínuas de desempenho,
+                        usabilidade e recursos. Certifique-se de verificar a documentação oficial e as notas de
+                        lançamento
+                        para obter as informações mais atualizadas sobre o Angular. Para saber mais sobre realases e
+                        patch
+                        novos, Acesse: <a target="_blank" href="https://angular.io/guide/releases">https://angular.io/guide/releases</a></p>
+                </li>
+            </ol>
 
-    <h2>Criando um projeto em Angular</h2>
-    <p>Use o Angular CLI para criar um novo projeto:</p>
-    <pre><code>ng new nome-do-projeto</code></pre>
+            <a name="instalando">
+                <h2>Instalando o Angular CLI</h2>
+            </a>
+            <p>O Angular CLI (Command Line Interface) é uma ferramenta essencial para o desenvolvimento Angular, pois
+                facilita a criação, compilação e gerenciamento de projetos. Para instalar o Angular CLI, siga os
+                seguintes
+                passos:</p>
+            <ol>
+                <li>Abra o terminal ou prompt de comando.</li>
+                <li>Execute o seguinte comando:</li>
+            </ol>
+            <pre><code>npm install -g @angular/cli</code></pre>
+            <p>No prompt deve estar dessa forma:</p>
+            <img width="570" src="img/passo1.png" alt="Passo 1">
 
-    <h2>Executando aplicações em Angular</h2>
-    <p>Entre no diretório do projeto e inicie a aplicação:</p>
-    <pre><code>cd nome-do-projeto
-ng serve</code></pre>
-    <p>Acesse a aplicação em <a href="http://localhost:4200/">http://localhost:4200/</a>.</p>
+            <a name="verificando">
+                <h2>Verificando a instalação</h2>
+            </a>
+            <p>Após a instalação do Angular CLI, você pode verificar se tudo ocorreu corretamente executando o seguinte
+                comando:</p>
+            <pre><code>ng version</code></pre>
+            <p>No prompt deve estar dessa forma:</p>
+            <img width="570" src="img/passo2.png" alt="Passo 2">
 
-    <h2>Conclusão</h2>
-    <p>Este é um guia básico para começar com o Angular. Consulte a <a href="https://angular.io/docs">documentação oficial do Angular</a> para aprender mais.</p>
+            <a name="criando">
+                <h2>Criando um projeto em Angular</h2>
+            </a>
+            <p>Com o Angular CLI instalado, você pode criar um novo projeto facilmente:</p>
+            <ol>
+                <li>Abra o terminal ou prompt de comando.</li>
+                <li>Navegue até o diretório onde deseja criar o projeto.</li>
+                <li>Execute o seguinte comando para criar um novo projeto:</li>
+            </ol>
+            <pre><code>ng new nome-do-projeto</code></pre>
+            <p>No prompt deve estar dessa forma:</p>
+            <img width="570" src="img/passo3.png" alt="Passo 3">
+
+            <p>No seu diretório deve estar dessa forma após isso:</p>
+            <img width="570" src="img/passo4.png" alt="Passo 4">
+
+            <a name="executando">
+                <h2>Executando aplicações em Angular</h2>
+            </a>
+            <p>Depois de criar o projeto, navegue até o diretório do projeto usando o terminal:</p>
+            <pre><code>cd nome-do-projeto<br>ng serve</code></pre>
+            <p>No prompt deve estar dessa forma:</p>
+            <img width="570" src="img/passo5.png" alt="Passo 5">
+
+            <p>Isso compilará o projeto e iniciará um servidor de desenvolvimento.</p>
+            <p>Acesse a aplicação em <a target="_blank" href="http://localhost:4200/">http://localhost:4200/</a>.</p>
+            <p>No seu navegador deve estar dessa forma:</p>
+            <img width="570" src="img/passo6.png" alt="Passo 6">
+
+            <a name="conclusao">
+                <h2>Conclusão</h2>
+            </a>
+            <p>Este é um guia básico para começar com o Angular. Consulte a <a target="_blank"
+                    href="https://angular.io/docs">documentação
+                    oficial do Angular</a> para aprender mais.</p>
+
+            <a name="referencias">
+                <h2>Referências</h2>
+            </a>
+            <p><a target="_blank"
+                    href="https://www.zup.com.br/blog/angular-versoes-e-releases">https://www.zup.com.br/blog/angular-versoes-e-releases</a>
+            </p>
+            <p><a target="_blank" href="https://youtu.be/xqWovo6Enq0">https://youtu.be/xqWovo6Enq0</a></p>
+            <p><a target="_blank" href="https://angular.io/docs">https://angular.io/docs</a></p>
+
+    </div>
+
+    <footer>
+        &copy; 2023 Manual do Angular
+    </footer>
 </body>
+
 </html>
