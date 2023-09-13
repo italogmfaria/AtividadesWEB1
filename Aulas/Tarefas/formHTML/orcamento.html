@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Pedido de Orçamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body bgcolor="#fe6b5e">
+    <a style="color: white" href="index.html"><img width="50px" src="../../img/back.png" alt="Voltar"
+            title="Voltar"></a><br>
+    <font face="sans-serif">
+        <center>
+            <h1>Peça um Orçamento</h1>
+            <form action="#" method="post">
+                <label for="produto">Produto desejado:</label>
+                <select id="produto" name="produto" required>
+                    <option value="Produto1">Produto 1</option>
+                    <option value="Produto2">Produto 2</option>
+                    <option value="Produto3">Produto 3</option>
+                </select><br><br>
+
+                <label for="quantidade">Quantidade desejada:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" required><br><br>
+
+                <label for="data-entrega">Data de Entrega:</label>
+                <input type="date" id="data-entrega" name="data-entrega" required><br><br>
+
+                <input type="submit" value="Solicitar Orçamento">
+            </form>
+        </center>
+    </font>
+</body>
+
+</html>
