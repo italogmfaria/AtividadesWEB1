@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://logospng.org/download/css-3/logo-css-3-2048.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Manual do CSS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Manual do CSS</h1>
+    </header>
+
+    <nav>
+        <a href="../../index.html">Link da Página Principal</a>
+        <a href="#introducao">Introdução ao CSS</a>
+        <a href="#versoes">Versões</a>
+        <a href="#aplicando">Como aplicar o CSS</a>
+        <a href="#sintaxe">Sintaxe em CSS</a>
+        <br><br>
+        <a href="#exemplo">Exemplo de uma regra CSS</a>
+        <a href="#convencoes">Convenções para nomes de id e classe</a>
+        <a href="#conclusao">Conclusão</a>
+        <a href="#referencias">Referências</a>
+    </nav>
+
+    <div class="container" align="justify">
+        <a name="introducao">
+            <h2>Introdução ao CSS</h2>
+        </a>
+        <p>&nbsp;&nbsp;  O CSS(Cascading Style Sheets) é um documento que é empregado para estilizar o conteúdo de um documento HTML,
+            ou seja, controlar a apresentação de documentos de marcação.
+            O HTML controla a estrutura de uma página, ao passo que o CSS determina sua aparência.
+            Uma folha de estilos é uma coleção de regras de formatação aplicadas a um documento HTML. </p>
+
+        <a name="versoes">
+            <h2>Versões</h2>
+        </a>
+        <ul>
+            <li>
+                <strong>CSS1 (Cascading Style Sheets nível 1):</strong>
+                <p>
+                    Foi a primeira versão do CSS e introduziu o conceito de separação de conteúdo e apresentação.
+                    Suportava estilos básicos, como fontes, cores, margens e alinhamentos.
+                    Limitações significativas em comparação com versões posteriores.
+                    </p>
+            </li>
+            <li>
+                <strong>CSS2 (Cascading Style Sheets nível 2):</strong>
+                <p>Lançado em várias partes entre 
+                    Introduziu recursos mais avançados, como posicionamento de elementos, seletores avançados, efeitos de transição e folhas de estilo para mídia específica.
+                    Fornecia mais controle sobre a formatação e layout.</p>
+            </li>
+            <li>
+                <strong>CSS2.1 (Cascading Style Sheets nível 2.1):</strong>
+                <p>Uma revisão do CSS2 que corrigia erros e inconsistências na especificação original.
+                Tornou-se uma recomendação do W3C em 2011.</p>
+            </li>
+            <li>
+                <strong>CSS3 (Cascading Style Sheets nível 3):</strong>
+                <p>Introduzido a partir de 1999, mas ainda em desenvolvimento.
+                    Dividido em módulos, cada um adicionando novos recursos, como sombras, gradientes, bordas arredondadas, transformações, animações, entre outros.
+                    Permitiu maior criatividade e flexibilidade no design web.
+                    Não é uma única especificação, mas um conjunto de módulos independentes. 
+                    As novas funcionalidades ainda estam sendo adicionadas como módulos ao CSS3.
+                    </p>
+            </li>
+        </ul>
+
+        <a name="aplicando">
+            <h2>Como aplicar o CSS</h2>
+        </a>
+        <p>&nbsp;&nbsp; As regras do CSS podem ser aplicadas de três formas distintas:</p>
+        <ul>
+            <li>inline: estilos aplicados diretamente em um elemento HTML,
+                dentro do documento</li>
+            <li>incorporado: O elemento style permite aplicar várias regras de
+                uma vez no próprio documento HTML.</li>
+            <li>folha de estilos externa: um documento com extensão .css
+                permite aplicar regras a um website inteiro de uma vez.</li>
+        </ul>
+
+        <p>&nbsp;&nbsp; Os estilos são aplicados na ordem em que são encontrados,
+            cascateando dos estilos externos até os estilos inline.</p>
+
+        <a name="sintaxe">
+            <h2>Sintaxe em CSS</h2>
+        </a>
+        <p>&nbsp;&nbsp; Regra CSS é a unidade básica de construção de uma folha de estilos. Sintaxe de uma regra:</p>
+        <pre><code>
+seletor{
+    propriedade: valor; /* declaração */
+}
+        </code></pre>
+
+        <p>&nbsp;&nbsp; A regra é composta de um seletor (alvo da regra) e de uma declaração
+            (parâmetros de estilo).
+        </p>
+        <p>&nbsp;&nbsp; Declaração, por sua vez, é composta por um par propriedade: valor</p>
+
+        <a name="exemplo">
+            <h2>Exemplo de uma regra CSS</h2>
+        </a>
+        <p>&nbsp;&nbsp; Abaixo temos uma regra CSS que aplica três declarações:</p>
+
+        <pre><code>  
+p{                          /*seletor*/
+    text-align: center; 
+    color: yellow;          /*propriedades e declarações*/
+    font-size: 20px;
+}
+        </code></pre>
+
+        <ul>
+            <li>Seletor: elemento p (regra aplicada a parágrafos)</li>
+            <li>Declarações: text-align: center; color: yellow; font-size: 20px;</li>
+            <li>Propriedades: text-align, color e font-size.</li>
+        </ul>
+
+        <a name="tipos">
+            <h2>Tipos de Seletores</h2>
+        </a>
+        <p>&nbsp;&nbsp; Abaixo temos uma regra CSS que aplica três declarações:</p>
+
+        <ol>
+
+            <li>Seletor Universal: Representa todos os elementos. Simbolizado pelo *</li>
+                <pre><code>  
+*{ color: green; } 
+/*todos os elementos do documento terão a cor verde*/
+        </code></pre>
+            
+
+            <li>Seletor de Tipo (ou de Elemento): Representa um determinado elemento.</li>
+                <pre><code>  
+p { color: red; } 
+/* todos os parágrafos terão texto na cor vermelha */
+
+h1 { color: yellow; } 
+/* todos os elementos h1 terão texto em amarelo */
+        </code></pre>
+            
+
+            <li>Seletor de Classe: Aplica estilo a elementos com o atributo class definido.</li>
+                <pre><code>  
+.verde { color: green; } 
+/* Aptica cor verde aos e'ementos que possuam o atributo */
+        
+h1.verde { color: green; } 
+/* Aplica cor verde apenas elementos h1 que possuam o atributo class= "verde" */
+        </code></pre>
+            
+
+            <li>Seletor de ID: Aplica estilo a elementos com o atributo id definido.</li>
+                <pre><code>  
+#corAzul { color: blue; } 
+/* Aplica cor azul ao elemento que possua o atributo id="corAzul" */
+        
+h1#corAzul { color: blue; } 
+/* Aplica cor azul ao elemento h1 que possua o atributo id="corAzul" */
+        </code></pre>
+            
+        </ol>
+
+        <a name="convencoes">
+            <h2>Convenções para nomes de id e classe</h2>
+        </a>
+        <p>&nbsp;&nbsp; Algumas convenções importantes para seguir ao criar nomes para atributos id e class:</p>
+
+        <ul>
+            <li>Não usar espaços em branco</li>
+            <li>Não empregar caracteres especiais</li>
+            <li>CSS é case-sensitive</li>
+        </ul>
+
+        <a name="conclusao">
+            <h2>Conclusão</h2>
+        </a>
+        <p>&nbsp;&nbsp; Este é um guia básico para começar com o CSS. Consulte a <a target="_blank"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">documentação do CSS</a> para aprender mais.</p>
+
+        <a name="referencias">
+            <h2>Referências</h2>
+        </a>
+
+        <p><a target="_blank" href="https://youtu.be/ZMCemNmB_v0">https://youtu.be/ZMCemNmB_v0</a></p>
+        <p><a target="_blank"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">https://developer.mozilla.org/pt-BR/docs/Web/CSS</a>
+        </p>
+
+    </div>
+    <footer>
+        &copy; 2023 Manual do CSS
+    </footer>
+</body>
+
+</html>
