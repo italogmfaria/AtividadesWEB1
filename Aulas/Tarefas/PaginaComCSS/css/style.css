@@ -8,7 +8,7 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    text-align: center;
+    text-align: CENTER;
     padding: 5px 0;
 }
 
@@ -71,7 +71,7 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #007bff;
-    color: black;
+    color: white;
 }
 
 img {

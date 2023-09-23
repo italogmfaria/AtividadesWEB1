@@ -3,100 +3,42 @@
 <head>
     <title>Página Principal</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/campfire.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-body {
-            background-color: #f0f0f0;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        #menu {
-            background-color: #333;
-            text-align: center;
-            padding: 10px;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        #menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        #menu a:hover {
-            color: #ff9900;
-        }
-        #content {
-            margin: 20px;
-        }
-        img a:hover {
-            background-color: #ff9900;
-            opacity: 0.7; 
-        }
-        img {
-            display: inline-block;
-            justify-content: center;
-            align-items: center;
-            border: 5px solid black;
-            max-width: 100%;
-            width: 210px; 
-            height: auto;
-            object-fit: cover; 
-            padding: 5px;
-            margin: 10px 20px 10px 0;
-            transition: background-color 0.1s, opacity 0.1s; 
-        }
-        
-        img:hover {
-            background-color: #ff9900;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) { /* Destinado a deixar o site responsivo*/
-            body {
-                font-size: 12px; 
-            }
-
-            #menu {
-                flex-direction: column; 
-                align-items: center; 
-            }
-            img {
-                max-width: 70%;
-                width: auto;
-                height: auto;
-                margin: 10px auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Mooli&display=swap">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="menu">
-        <a href="Tarefas/PaginaComCSS/paginacss.html">Página com CSS</a>
-        <a href="Tarefas/Angular/angular.html">Angular</a>
-        <a href="Tarefas/formHTML/index.html">Forms em HTML</a>
-        <a href="Tarefas/Listas/index.html">Tipos de Listas</a>
-        <a href="Tarefas/PaginaComComentarios/pagina.html">Página com Linkagens</a>
-        <a href="Tarefas/PaginaComComentarios/index.html">Página com Comentários</a>
-        <a href="Tarefas/FeitoEmAula/index.html">Primeiro HTML</a>
-    </div>
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img id="logo" src="img/campfire.png"></a>
+        <!-- Menu Hamburguer-->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <div class="menu">
+                <a href="Tarefas/PaginaComCSS/paginacss.html">Css</a>
+                <a href="Tarefas/Angular/angular.html">Angular</a>
+                <a href="Tarefas/formHTML/index.html">Forms</a>
+                <a href="Tarefas/Listas/index.html">Tipos de Listas</a>
+                <a href="Tarefas/PaginaComComentarios/pagina.html">Linkagens</a>
+                <a href="Tarefas/PaginaComComentarios/index.html">Comentários</a>
+                <a href="Tarefas/FeitoEmAula/index.html">Primeiro HTML</a>
+            </div>
+        </nav>
+    </header>
 
     <div id="content">
-<center>
+<center id="h">
     <h1><b>Programação para Web I</b></h1>
     <h2><b>Programação para Web I</b></h2>
     <h3><b>Programação para Web I</b></h3>
     <h4><b>Programação para Web I</b></h4>
     <h5><b>Programação para Web I</b></h5>
-    <h6><b>Programação para Web I</b></h6>
-</center>
+</center><br>
+
         <!-- Fazer linkagem de imagem com cada html-->
         <center>
             <a href="Tarefas/PaginaComCSS/paginacss.html" ><img alt="Tarefa de CSS" title="Tarefa de CSS" src="img/css.png"></a> 
