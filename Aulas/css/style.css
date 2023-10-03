@@ -41,6 +41,20 @@ img:not(#logo,.logo,.menu,.nav):hover {
     opacity: 0.8;
 }
 
+img a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    margin-right: 10px;
+    margin-top: 23px;
+    font-size: 16px;
+    transition: color 0.3s;
+    position: relative;
+}
+img a:hover {
+    color: #ff9900;
+    margin-top: 10px;
+}
 
 .header{
     background-color: #333;
@@ -48,6 +62,7 @@ img:not(#logo,.logo,.menu,.nav):hover {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 2;
 }
 /* Logo */
 .logo{
@@ -63,7 +78,6 @@ img:not(#logo,.logo,.menu,.nav):hover {
     position: fixed;
     background-color: #333;
     overflow: hidden;
-
 }
 .menu {
     background-color: #333;
@@ -80,14 +94,15 @@ img:not(#logo,.logo,.menu,.nav):hover {
     color: white;
     text-decoration: none;
     margin: 10px;
-    margin-right: 22px;
-    margin-top: 22px;
-    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 23px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 .menu a:hover {
     color: #ff9900;
 }
+
 
 .nav{
     max-height: 0;
@@ -145,7 +160,7 @@ img:not(#logo,.logo,.menu,.nav):hover {
     top:0;
 }
 
-/* Estilos para resoluções menores ou iguais a 1330px */
+/* Estilos para resoluções menores ou iguais a 1005px */
 @media (min-width: 1005px) {
     #h{
         font-size: 20px;

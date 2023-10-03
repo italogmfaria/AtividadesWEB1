@@ -1,0 +1,216 @@
+/* Define as propriedades gerais do corpo da página */
+body {
+    font-family: sans-serif;
+    /* Define a fonte do texto do corpo */
+    margin: 0;
+    /* Remove margens padrão do corpo */
+    background-repeat: no-repeat;
+    /* Impede a repetição do plano de fundo */
+    background-image: linear-gradient(1000deg, #ff8a00, #e52e71);
+    /* Define um plano de fundo gradiente linear */
+    background-size: contain;
+    /* Faz com que a imagem de fundo cubra toda a tela */
+    height: 100vh;
+    /* Define a altura do corpo para ocupar toda a altura da tela */
+}
+
+/* Estiliza a lista não ordenada */
+ul {
+    list-style: none;
+    /* Remove marcadores de lista padrão */
+    padding: 0;
+    /* Remove o preenchimento padrão */
+    overflow: hidden;
+    /* Controla o comportamento de overflow do conteúdo */
+    transition: all .5s;
+    /* Adiciona uma transição suave para propriedades animadas */
+}
+
+/* Define o estilo da barra de navegação */
+nav {
+    background-color: #333333;
+    /* Define a cor de fundo da barra de navegação */
+    padding: 0 20px;
+    /* Adiciona preenchimento horizontal */
+    justify-content: space-between;
+    /* Alinha itens horizontalmente */
+    align-items: center;
+    /* Alinha itens verticalmente */
+}
+
+/* Estiliza os cabeçalhos h1 e p */
+h1, p {
+    color: white;
+    /* Define a cor do texto como branco */
+}
+
+/* Define o estilo dos links que não estão dentro de elementos <li> */
+a:not(li) {
+    text-decoration: none;
+    /* Remove a decoração de texto padrão dos links */
+}
+
+/* Define o estilo para a barra de navegação e a lista não ordenada */
+nav, ul {
+    display: flex;
+    /* Define a exibição como flexbox */
+    flex-direction: row;
+    /* Define a direção da flexbox como horizontal */
+}
+
+/* Estiliza os itens da lista */
+li {
+    padding: 0 20px;
+    /* Adiciona preenchimento horizontal aos itens da lista */
+}
+
+/* Estiliza o cabeçalho h1 */
+h1 {
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 10px;
+    /* Adiciona preenchimento ao redor do h1 */
+}
+
+/* Estiliza o botão */
+button {
+    background-color: transparent;
+    /* Define o fundo como transparente */
+    border: none;
+    /* Remove a borda do botão */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    font-size: 36px;
+    /* Define o tamanho da fonte */
+    position: absolute;
+    /* Define a posição absoluta */
+    right: 10px;
+    /* Define a distância da borda direita */
+    top: 10px;
+    /* Define a distância da borda superior */
+    display: none;
+    /* Inicialmente, o botão não é exibido */
+}
+
+/* Estiliza os elementos ao passar o mouse sobre eles */
+li:hover, h1:hover, button:hover {
+    cursor: pointer;
+    /* Muda o cursor para uma mãozinha ao passar o mouse */
+    opacity: 0.8;
+    /* Reduz a opacidade ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Define um fundo semi-transparente */
+    border-radius: 30px;
+    /* Adiciona cantos arredondados */
+}
+
+/* Altera a altura da lista não ordenada quando o botão é focado */
+button:focus~ul {
+    height: 200px;
+    /* Define a altura da lista para 200px quando o botão é focado */
+}
+
+
+/* Estiliza o formulário */
+fieldset {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: white;
+    border: 5px solid #333333;
+    border-radius: 10px;
+    position: relative;
+}
+
+legend {
+    text-align: center;
+    color: white;
+    background-color: #333333;
+    border-radius: 5px;
+    font-size: 20px;
+    white-space: normal;
+    width: 50%;
+    padding: 5px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.form {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: #333333;
+    color: white;
+
+    padding: 10px 100px;
+    margin: 0% 20%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #424242;
+}
+
+/* Define o estilo de elementos responsivos */
+@media (max-width:768px) {
+    nav, ul {
+        flex-direction: column;
+    }
+
+    ul {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+
+    nav {
+        padding-top: 0px;
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin: 10px;
+    }
+
+    button {
+        display: flex;
+    }
+
+    ul, li {
+        width: 100%;
+    }
+
+    body {
+        background-size: contain;
+        height: 140vh;
+    }
+
+    fieldset {
+        margin: 25px auto;
+        max-width: 300px;
+        background-color: white;
+        border: 5px solid #333333;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .btn-submit {
+        background-color: #333333;
+        color: white;
+        padding: 10px 100px;
+        margin: 0% 8%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+}
