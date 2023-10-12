@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Página Principal</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/campfire.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Mooli&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/campfire.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Página Inicial</title>
 </head>
 
 <body>
-    <header class="header">
-        <!-- Logo -->
-        <a href="#" class="logo"><img id="logo" src="img/campfire.png"></a>
-        <!-- Menu Hamburguer-->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <!-- Menu -->
-        <nav class="nav">
-            <div class="menu">
-                <a href="Tarefas/FormCSS/index.html">Form com CSS</a>
-                <a href="Tarefas/PaginaComCSS/paginacss.html">CSS</a>
-                <a href="Tarefas/Angular/angular.html">Angular</a>
-                <a href="Tarefas/FormHTML/index.html">Forms</a>
-                <a href="Tarefas/Listas/index.html">Tipos de Listas</a>
-                <a href="Tarefas/PaginaComComentarios/pagina.html">Linkagens</a>
-                <a href="Tarefas/PaginaComComentarios/index.html">Comentários</a>
-                <a href="Tarefas/FeitoEmAula/index.html">Primeiro HTML</a>
-            </div>
-        </nav>
-    </header>
 
-    <div id="content">
-<center id="h">
-    <h1><b>Programação para Web I</b></h1>
-    <h2><b>Programação para Web I</b></h2>
-    <h3><b>Programação para Web I</b></h3>
-    <h4><b>Programação para Web I</b></h4>
-</center>
-
-        <!-- Fazer linkagem de imagem com cada html-->
-        <center>
-            <a href="Tarefas/FormCSS/index.html" ><img alt="Form com CSS" title="Form com CSS" src="img/formcss.png"></a> 
-            <a href="Tarefas/PaginaComCSS/paginacss.html" ><img alt="Tarefa de CSS" title="Tarefa de CSS" src="img/css.png"></a> 
-            <a href="Tarefas/Angular/angular.html" ><img alt="Tarefa de Angular" title="Tarefa de Angular" src="img/angular-logo.png"></a>  
-            <a href="Tarefas/PaginaComComentarios/pagina.html"><img alt="Página com Linkagens" title="Página com Linkagens" src="img/links.jpg"></a>
-            <br>
-            <a href="Tarefas/FormHTML/index.html"><img alt="Form HTML" title="Form HTML" src="img/form.png"></a>
-            <a href="Tarefas/Listas/index.html" ><img alt="Tipos de Listas" title="Tipos de Listas" src="img/lists.jpg"></a>
-            <a href="Tarefas/PaginaComComentarios/index.html" ><img alt="Página com Comentários" title="Página com Comentários" src="img/comentario.png"></a>
-            <a href="Tarefas/FeitoEmAula/index.html"><img alt="Primeiro HTML" title="Primeiro HTML" src="img/HTML.png"></a>
-        </center>
+    <div class="container-main">
+        <h1>Bem-vindo ao Meu Site</h1>
+        <div class="buttons">
+            <a href="ProjetoPrincipal/index.html" class="btn">Projeto Principal</a>
+            <a href="ProjetoAngular/" class="btn">Projeto em Angular</a>
+            <a href="Tarefas/index.html" class="btn">Atividades</a>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="theme-switch">
+          <div class="switch"></div>
+        </div>
+        <div class="navigation">
+          <ul>
+            <a href="" class="active" target="_blank">Home</a>
+            <a href="" target="_blank">Sobre</a>
+            <a href="" target="_blank">LinkedIn</a>
+            <a href="" target="_blank">Git Hub</a>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">&copy2023 Ítalo Gonçalves M. Faria</p>
+
+    <script>
+        $(".theme-switch").on("click", () => {
+            $("body").toggleClass("light-theme");
+        });
+    </script>
 </body>
 
 </html>

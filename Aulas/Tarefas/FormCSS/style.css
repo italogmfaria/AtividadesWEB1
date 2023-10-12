@@ -8,10 +8,11 @@ body {
     /* Impede a repetição do plano de fundo */
     background-image: linear-gradient(1000deg, #ff8a00, #e52e71);
     /* Define um plano de fundo gradiente linear */
-    background-size: contain;
+    background-size: cover;
     /* Faz com que a imagem de fundo cubra toda a tela */
     height: 100vh;
     /* Define a altura do corpo para ocupar toda a altura da tela */
+    background-attachment: scroll;
 }
 
 /* Estiliza a lista não ordenada */
@@ -24,6 +25,8 @@ ul {
     /* Controla o comportamento de overflow do conteúdo */
     transition: all .5s;
     /* Adiciona uma transição suave para propriedades animadas */
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 /* Define o estilo da barra de navegação */
@@ -148,7 +151,6 @@ legend {
 .btn-submit {
     background-color: #333333;
     color: white;
-
     padding: 10px 100px;
     margin: 0% 20%;
     border: none;
@@ -162,6 +164,11 @@ legend {
 
 /* Define o estilo de elementos responsivos */
 @media (max-width:768px) {
+    body {
+        height: 150vh;
+        z-index: -2; 
+    }
+
     nav, ul {
         flex-direction: column;
     }
@@ -187,11 +194,6 @@ legend {
 
     ul, li {
         width: 100%;
-    }
-
-    body {
-        background-size: contain;
-        height: 140vh;
     }
 
     fieldset {
