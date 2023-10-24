@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Combustível</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <a href="../../Tarefas/index.html" class="back-to-top">
+		<span class="material-icons">arrow_upward</span>
+	</a>
+    
+    <fieldset>
+    <h1>Calculadora Combustível</h1>
+    <h4>Para determinar o melhor Combustível</h4>
+    <div class="gauge-wrapper">
+        <div class="gauge four rischio2">
+            <div class="slice-colors">
+                <div class="st slice-item"></div>
+                <div class="st slice-item"></div>
+                <div class="st slice-item"></div>
+            </div>
+            <div class="needle"></div>
+            <div class="gauge-center">
+                <div class="label">Combustível</div>
+                <div class="state"></div>
+            </div>
+        </div>
+    </div>
+
+    <form name="frdados">
+        <input type="text" name="txtetanol" size="10px" placeholder="Etanol" autofocus>
+        <input type="text" name="txtgasolina" size="10px" placeholder="Gasolina">
+        <input type="button" value="Calcular" onclick="calcularMelhorCombustivel()">
+        <input type="reset" value="Limpar" onclick="limpar()">
+    </form>
+
+</fieldset>
+
+   <!-- Versão do Jorcivan <img src="img/normal.jpg" id="imagem" size="20px">
+   
+    <form name="frdados">
+        <input type="text" name="txetanol" size="10px" placeholder="Etanol" autofocus>
+        <input type="text" name="txgasolina" size="10px" placeholder="Gasolina">
+        <input type="button" value="Calcular" onclick="melhor()">
+        <input type="reset" value="Limpar" onclick="limpar()">
+    </form>
+    -->
+
+
+</body>
+
+</html>

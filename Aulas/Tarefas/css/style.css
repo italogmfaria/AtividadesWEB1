@@ -94,9 +94,9 @@ img a:hover {
     color: white;
     text-decoration: none;
     margin: 10px;
-    margin-right: 10px;
+    margin-right: 3px;
     margin-top: 23px;
-    font-size: 16px;
+    font-size: 15px;
     transition: color 0.3s;
 }
 .menu a:hover {
@@ -159,6 +159,14 @@ img a:hover {
     transform: rotate(45deg);
     top:0;
 }
+
+.copyright {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    font-weight: bold;
+    text-align: center;
+  }
 
 /* Estilos para resoluções menores ou iguais a 1005px */
 @media (min-width: 1005px) {
