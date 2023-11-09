@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Remoto</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1970/1970049.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <a href="../../Tarefas/index.html" class="back-to-top">
+    <span class="material-icons">arrow_upward</span>
+  </a>
+
+  <h1>Controle Remoto em JS</h1>
+
+  <div class="tv-space">
+    <div class="tv-border">
+      <div class="tv-container">
+        <iframe id="video" width="480" height="320" src="https://www.youtube.com/embed/dVYl5ImNjow?enablejsapi=1&html5=1?&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="tv-nav"></div>
+    </div>
+    <div class="tv-leg"></div>
+    <div class="tv-step"></div>
+  </div>
+  
+  <div id="container">
+    <div id="controle">
+      <div class="boxes">
+        <div class="mainrow">
+          <button class="mainbox" id="power"><span class="material-icons">power_settings_new</span></button>
+          <button class="mainbox" id="mute"><span class="material-icons">volume_mute</span></button>
+        </div><br>
+        <div class="row">
+          <button class="box digit" data-digit="1">1</button>
+          <button class="box digit" data-digit="2">2</button>
+          <button class="box digit" data-digit="3">3</button>
+        </div>
+        <div class="row">
+          <button class="box digit" data-digit="4">4</button>
+          <button class="box digit" data-digit="5">5</button>
+          <button class="box digit" data-digit="6">6</button>
+        </div>
+        <div class="row">
+          <button class="box digit" data-digit="7">7</button>
+          <button class="box digit" data-digit="8">8</button>
+          <button class="box digit" data-digit="9">9</button>
+        </div><br>
+        <div class="row">
+          <div class="block block-channel">
+            <div type="button" class="btn round btn-big text">
+              <button type="button" class="btn-big-inner text">OK</button>
+              <button type="button" class="btn-big-before"><span class="material-icons">add</span></button>
+              <button type="button" class="btn-big-after"><span class="material-icons">remove</span></button>
+              <button type="button" class="btn-big-inner-before"><span class="material-icons">arrow_forward</span></button>
+              <button type="button" class="btn-big-inner-after"><span class="material-icons">arrow_back</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
